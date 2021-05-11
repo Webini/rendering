@@ -1,0 +1,23 @@
+.ball {
+  width: 10.125rem;
+  height: 10.125rem;
+  border-radius: 100%;
+  background-color: #282c34;
+  color: #fff;
+  transition: all ease-in-out 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  margin: 0.5rem;
+  flex-direction: column;
+
+  &--interactive {
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
