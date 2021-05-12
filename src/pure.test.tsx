@@ -1,29 +1,33 @@
 describe('Pure or not ? ', () => {
-  it.skip('Array.sort', () => {
+  it('Array.sort', () => {
     const array = [2, 1, 3, 0];
     const result = array.sort((a, b) => a - b);
 
-    expect(array === result).toBe();
+    // not pure
+    expect(array === result).toBe(true);
   });
 
-  it.skip('Array.map', () => {
+  it('Array.map', () => {
     const array = [1, 2, 3, 4];
     const result = array.map((el) => el);
 
-    expect(array === result).toBe();
+    // pure
+    expect(array === result).toBe(false);
   });
 
-  it.skip('Array.slice', () => {
+  it('Array.slice', () => {
     const array = [1, 2, 3, 4];
     const result = array.slice(0, 2);
 
-    expect(array === result).toBe();
+    // pure
+    expect(array === result).toBe(false);
   });
 
-  it.skip('Array.splice', () => {
+  it('Array.splice', () => {
     const array = [1, 2, 3, 4];
     const result = array.splice(0, 2);
 
-    expect(array === result).toBe();
+    // pure result but array is modified
+    expect(array === result).toBe(false);
   });
 });
